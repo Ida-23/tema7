@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titel</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: solid 1px;
+            font-size: 2rem;
+        }
+
+        section {
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-gap: 20px;
+
+        }
+
+        article {
+            border: solid 1px;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        Titel
+    </header>
+    <main>
+        <h1>undertitel</h1>
+        <section>
+            <article>
+                <img src="https://placeimg.com/640/480/any">
+                <h2>artilek 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores tenetur, non. Voluptas excepturi fugiat error temporibus possimus soluta deserunt quae dolores repudiandae autem. Rerum aut, nobis voluptatem deleniti animi? Animi.</p>
+            </article>
+
+            <article>
+                <img src="https://placeimg.com/640/480/any">
+                <h2>artilek 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores tenetur, non. Voluptas excepturi fugiat error temporibus possimus soluta deserunt quae dolores repudiandae autem. Rerum aut, nobis voluptatem deleniti animi? Animi.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>dette er min footer</p>
+    </footer>
+
+    <script>
+        const titel = document.querySelector("header");
+        console.log(titel);
+        titel.textContent = "Billedegalleri";
+
+
+
+        const h1 = document.querySelector("main h1");
+        console.log(h1);
+
+
+        const articel1 = document.querySelector("article:first-child");
+        console.log(articel1);
+
+
+        const img1 = document.querySelector("article:first-child img");
+        console.log(img1);
+
+        img1.src = "../billeder/3.2_bred_Ida_Sofie.jpg";
+        img1.alt = "billede af en bygning jeg fotografede på første semester";
+
+
+
+
+        const h2_1 = document.querySelector("article:first-child h2");
+        console.log(h2_1);
+
+        h2_1.textContent = "Dette er et flot billede";
+
+
+        const p_1 = document.querySelector("article:first-child p");
+        console.log(p_1);
+
+        p_1.textContent = "hjem med dig jeg hedder kaj. kaj kaj kaj ja det er mig";
+
+
+
+        const articel2 = document.querySelector("article:nth-child(2)");
+        console.log(articel1);
+
+        const img2 = document.querySelector("article:nth-child(2) img");
+        console.log(img2);
+
+        img2.src = "../billeder/3.2_bred_Ida_Sofie.jpg";
+        img2.alt = "billede af en bygning jeg fotografede på første semester";
+
+
+        const h1_2 = document.querySelector("article:nth-child(2) h2");
+        console.log(h1_2);
+        h1_2.textContent = "Dette er et endnu folttere billede";
+
+
+        const p_2 = document.querySelector("article:nth-child(2) p");
+        console.log(p_2);
+        p_2.textContent = "hjem med dig jeg hedder ikke kaj. kaj kaj kaj nej det er ikke mig";
+
+    </script>
+
+
+</body>
+
+</html>
