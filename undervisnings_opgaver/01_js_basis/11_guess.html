@@ -18,6 +18,9 @@
 
 
     <script>
+        // kunne også ha avndenst en konstant (const) i stedet for let
+        // const anvendes når elementet aldrig ændre sig.
+
         let tal = Math.round(Math.random() * 20);
         console.log(tal);
         let klikTæller = 0;
@@ -30,6 +33,9 @@
 
         function buttonClicked() {
             let gætTal = document.querySelector("#gæt").value;
+
+            // man anvendere value for at få talet man har indtastet i feltet fra html.
+
 
             klikTæller++;
 
