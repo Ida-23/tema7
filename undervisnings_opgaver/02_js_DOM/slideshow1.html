@@ -47,6 +47,7 @@
 
 
     <script>
+        // her ligges alle de billede sliteshowet
         const billede = ["img1.png", "img2.png", "img3.png", "img4.png", "img5.png", "img6.png", "img7.png", "img8.png"];
 
 
@@ -60,9 +61,12 @@
         function nytBilled() {
             console.log("Nyt billed");
 
+            // lig et billede til
             billedCount++
             console.log(billedCount);
 
+
+            // for at få slideshowet til at gentage sig igen(starte forfra)
             if (billedCount > 7) {
                 billedCount = 0;
             }
@@ -71,6 +75,26 @@
             img.src = "https://raw.githubusercontent.com/martinbregnhoi/Tema7E20/master/billeder/" + billede[billedCount];
             img.alt = billede[billedCount];
         }
+
+        // +billede da peger man på et billede fra const billede.
+
+        // []= inde i dem her placere man så det man gene vil have vist.
+
+
+
+
+
+
+
+        // den kunne også have blevet løst ved at skrive nedstående
+
+        //
+        //        if (billedCount < 7) {
+        //            img.src = "https://raw.githubusercontent.com/martinbregnhoi/Tema7E20/master/billeder/" + billede[billedCount];
+        //            img.alt = billede[billedCount];
+        //        } else {
+        //            billedCount = 0;
+        //        }
 
     </script>
 </body>

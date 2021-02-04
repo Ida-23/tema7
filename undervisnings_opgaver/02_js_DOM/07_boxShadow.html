@@ -35,6 +35,10 @@
             text-align: center;
         }
 
+        .the_shodow {
+            box-shadow: 50px 12px 46px -9px rgba(192, 8, 8, 0.67);
+        }
+
     </style>
 </head>
 
@@ -46,13 +50,13 @@
     <main>
         <h1>undertitel</h1>
         <section>
-            <article>
+            <article class="the_shodow">
                 <img src="https://placeimg.com/640/480/any">
                 <h2>artilek 1</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores tenetur, non. Voluptas excepturi fugiat error temporibus possimus soluta deserunt quae dolores repudiandae autem. Rerum aut, nobis voluptatem deleniti animi? Animi.</p>
             </article>
 
-            <article>
+            <article class="the_shodow">
                 <img src="https://placeimg.com/640/480/any">
                 <h2>artilek 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores tenetur, non. Voluptas excepturi fugiat error temporibus possimus soluta deserunt quae dolores repudiandae autem. Rerum aut, nobis voluptatem deleniti animi? Animi.</p>
@@ -148,78 +152,29 @@
 
             nyArtikel.innerHTML = "<img src='http://mabe-kea.dk/E19/pics/pig.png'><h1>Ny overskrift</h1><p>kehvc.ksebdv.ksjebdv.khsbefv</p>";
 
+            nyArtikel.classList.add("the_shodow");
 
 
+            document.querySelector("article:nth-child(1)").addEventListener("mouseover", opgave7);
+            document.querySelector("article:nth-child(1)").addEventListener("mouseout", opgave7);
+
+            document.querySelector("article:nth-child(2)").addEventListener("mouseover", opgave7);
+            document.querySelector("article:nth-child(2)").addEventListener("mouseout", opgave7);
+
+            document.querySelector("article:nth-child(3)").addEventListener("mouseover", opgave7);
+            document.querySelector("article:nth-child(3)").addEventListener("mouseout", opgave7);
+
+
+            function opgave7() {
+
+                this.classList.toggle("the_shodow");
+            }
+
+
+
+            //øvels 6: få skiftet billede ved et klik på billede 1:
             img1.addEventListener("click", billedeSkift);
 
-
-
-            //øvelse 7
-
-            articel1.style.boxShadow = "10px 20px 30px lightblue";
-            articel2.style.boxShadow = "10px 20px 30px lightblue";
-            nyArtikel.style.boxShadow = "10px 20px 30px lightblue";
-
-            articel1.addEventListener("mouseover", opgave71);
-            //            articel2.addEventListener("mouseover", opgave7);
-            //            nyArtikel.addEventListener("mouseover", opgave7);
-
-            articel1.addEventListener("mouseout", opgave71);
-            //            articel2.addEventListener("mouseout", opgave7);
-            // nyArtikel.addEventListener("mouseout", opgave7);
-
-        }
-
-
-
-        function opgave71() {
-            console.log("opgave 7 virker");
-            const box = document.querySelector("article:first-child")
-
-
-            document.querySelector("article:first-child").classList.toggle("box");
-
-
-
-
-
-
-            //
-            //            const box = document.querySelector("article:first-child")
-            //
-            //
-            //            const box1 = document.querySelector("article:nth-child(2)");
-            //
-            //
-            //            const box3 = document.querySelector("article:nth-child(3)");
-            //
-            //
-            //            let erskjult = document.querySelector("article:first-child").classList.toggle("box");
-            //
-            //            if (erskjult == true) {
-            //                box.style.boxShadow = "none";
-            //            } else {
-            //                box.style.boxShadow = "10px 20px 30px lightblue";
-            //            }
-
-
-            //            let erskjult1 = document.querySelector("article:nth-child(2)").classList.toggle("box1");
-            //
-            // if (erskjult1 == false) {
-            // box1.style.boxShadow = "none";
-            // } else {
-            // box1.style.boxShadow = "10px 20px 30px lightblue";
-            // }
-            //
-            //
-            //
-            // let erskjult3 = document.querySelector("article:nth-child(3)").classList.toggle("box3");
-            //
-            // if (erskjult3 == false) {
-            // box3.style.boxShadow = "none";
-            // } else {
-            // box3.style.boxShadow = "10px 20px 30px lightblue";
-            // }
         }
 
 
