@@ -1,0 +1,33 @@
+[{
+        "navn": "gris",
+        "Type": "pattedyr",
+        "Levested": "fra svinefarm",
+        "likes": ["mudder", "varme", "mad"]
+            },
+
+    {
+        "navn": "frø",
+        "Type": "amfibie",
+        "Levested": "fra dam",
+        "likes": ["vand", "åkander", "fluer"]
+            },
+    {
+        "navn": "rev",
+        "Type": "pattedyr",
+        "Levested": "fra skov",
+        "likes": ["mus", "sommer", "skove"]
+            },
+
+    {
+        "navn": "sild",
+        "Type": "fisk",
+        "Levested": "fra havet",
+        "likes": ["vand", "planter", "mad"]
+            },
+
+    {
+        "navn": "krokodille",
+        "Type": "krybdyr",
+        "Levested": "fra havet",
+        "likes": ["mennesker", "vand", "sove"]
+            }]
