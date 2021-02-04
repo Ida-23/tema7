@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<style>
+    img {
+        border: solid 2px red;
+        margin: auto 10px;
+        padding: 10px 10px;
+    }
+
+    article {
+        border: solid 5px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+</style>
+
+
+<body>
+
+    <main>
+        <section id="liste"></section>
+
+
+        <template>
+            <article id="dyr">
+                <h3></h3>
+                <img src="" alt="">
+                <p>Type:</p>
+                <p>Levested:</p>
+            </article>
+        </template>
+    </main>
+
+
+
+
+
+    <script>
+        const container = document.querySelector("#liste");
+
+
+        const listeTemplate = document.querySelector("template");
+
+
+        const fil = "alleDyr.json";
+
+        async function hentData(fil) {
+            const resultat = await fetch(fil);
+            const json = await resultat.json();
+            vis(json);
+        }
+
+
+
+        function vis(json) {
+            json.forEach(dyr => {
+
+                let klon = listeTemplate.cloneNode(true).content;
+
+                klon.querySelector("h3").textContent += dyr.navn;
+                klon.querySelector("img").src = dyr.Billede;
+                klon.querySelector("p").textContent += dyr.Type;
+                klon.querySelector("p:nth-child(4)").textContent += dyr.Levested;
+                container.appendChild(klon);
+            })
+
+        }
+        hentData(fil);
+    </script>
+</body></html>
