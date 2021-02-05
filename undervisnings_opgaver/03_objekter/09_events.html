@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<style>
+    section {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-gap: 20px;
+
+    }
+
+    img {
+        border: solid 2px red;
+        margin: auto 10px;
+        padding: 10px 10px;
+    }
+
+    article {
+        border: solid 5px;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+</style>
+
+
+<body>
+
+    <main>
+        <section id="liste"></section>
+
+        <template>
+            <article id="film">
+                <img src="" alt="">
+                <h3></h3>
+                <p></p>
+            </article>
+
+        </template>
+    </main>
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        let filmene = [{
+                "vide": "https://odense-film-festival.s3.eu-central-1.amazonaws.com/media/W6dOqabNhHKBPXxxKKEZRA84-360.jpg",
+                "titel": "A Calling",
+                "text": "Christian Bengtson | Danmark | 20 min | 2019",
+
+            },
+
+            {
+                "vide": "https://offstream.dk/play/108",
+                "titel": "A Hole In Heart",
+                "text": "Mees Peijnenberg | Holland | 9 min | 2015",
+
+            },
+            {
+                "vide": "https://offstream.dk/play/268",
+                "titel": "A Place In The Sun - 110 years after the genocide",
+                "text": "Christian Bengtson | Danmark | 20 min | 2019",
+
+            },
+
+            {
+                "vide": "https://offstream.dk/play/312",
+                "titel": "A Town Of Tow",
+                "text": "Christian Bengtson | Danmark | 20 min | 2019",
+
+            },
+
+            {
+                "vide": "https://offstream.dk/play/473",
+                "titel": "A Worthy Ma",
+                "text": "Christian Bengtson | Danmark | 20 min | 2019",
+
+            },
+
+        ]
+
+
+        function start() {
+            console.log("start virker")
+
+            const container = document.querySelector("#liste");
+            const listeTemplate = document.querySelector("template");
+
+
+            filmene.forEach(film => {
+
+                let klon = listeTemplate.cloneNode(true).content;
+
+                klon.querySelector("img").src += film.vide;
+                klon.querySelector("h3").textContent = film.titel;
+                klon.querySelector("p").textContent += film.text;
+
+                container.appendChild(klon);
+            });
+
+        }
+
+    </script>
+</body>
+
+</html>
