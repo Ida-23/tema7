@@ -26,11 +26,36 @@
             border: 1px solid;
             border-radius: 1em;
         }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        button {
+            margin: 0 10px;
+        }
+
+
+        .valgt {
+            background-color: orangered;
+        }
     </style>
 
 </head>
 
 <body>
+
+    <header>
+        <nav>
+            <button data-troende="alle">Alle</button>
+            <button data-troende="ja" class="valgt">Troende</button>
+            <button data-troende="nej">Ikke troende</button>
+            <button data-troende="tvivler">Tvivler</button>
+        </nav>
+    </header>
+
     <section id="liste"></section>
 
     <template>
